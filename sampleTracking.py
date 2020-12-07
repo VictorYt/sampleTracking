@@ -43,10 +43,9 @@ def main(dfinal):
     """
     # List of file
     all_samples = glob.glob("*.tsv")
-    runname = os.path.basename(os.getcwd())
-    output = runname + '.tsv'
+    output = os.path.basename(os.getcwd()) + '.tsv'
     for s in all_samples:
-        iterarray = None
+        iterarray = []
         df = pd.read_csv(s, header=0, sep="\t")
         sample = s.replace(".tsv", "")
         iterarray.append(sample)
