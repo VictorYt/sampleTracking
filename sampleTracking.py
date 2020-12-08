@@ -61,7 +61,7 @@ def main(dfinal):
 
     #dfinal = dfinal.groupby(dfinal.columns.tolist()).size().reset_index().rename(columns={0: 'records'})
     dfinal = dfinal.set_index(dfinal.columns[0])
-    dup_info = dfinal.duplicated()
+    dup_info = dfinal.duplicated(keep=False)
     dup_info.to_csv("Duplication_information.tsv", sep="\t", header=['Duplication_information'])
     dfinal.to_csv(output, sep="\t", index=True)
 
