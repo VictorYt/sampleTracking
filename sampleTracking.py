@@ -32,6 +32,7 @@ REFERENCE = OrderedDict([('rs1801133','G/G'),
                          ('rs2108622','C/C'),
                          ('rs4680','G/G'),
                          ('rs1135840','C/C')])
+# Care rs1135840 reference is inverted in hg19 G>C instead of C>G
 cols = list(REFERENCE.keys())
 cols.insert(0, 'Samples')
 dfFinal = pd.DataFrame(columns=cols)

@@ -34,6 +34,8 @@ def getGenotype(df, index):
         geno = "C/T"
     elif df.iat[index, 6] == "[T, T]":
         geno = "T/T"
+    elif df.iat[index, 6] == "[G*, C]" and df.iat[index, 2] == "rs1135840":
+        geno = "C/G"
     elif df.iat[index, 6] == "[G*, C]":
         geno = "G/C"
     elif df.iat[index, 6] == "[C, C]":
